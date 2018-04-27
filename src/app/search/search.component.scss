@@ -1,0 +1,122 @@
+.topbar {
+  width: 80%;
+  margin: auto;
+  margin-top: 60px;
+  background-color: #1C688E;
+  border-radius: 3px 3px 0 0;
+  &__search {
+    width: 90%;
+    height: 50px;
+    margin: 5%;
+    padding-left: 15px;
+    border-radius: 3px;
+    border: 1px solid #D6D6D6;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    &::placeholder {
+      color: #B3B3B3;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 100px;
+  border-radius: 0 0 3px 3px;
+  background-color: white;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2);
+  &__sidebar {
+    width: 30%;
+    border-right: 2px solid #E6E6E6;
+  }
+  &__results {
+    width: 70%;
+    padding: 20px 40px 40px 40px;
+    .numbers {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      p {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        color: #333333;
+      }
+      .line {
+        width: 70%;
+        border: thin solid #E6E6E6;
+      }
+    }
+    .card {
+      display: flex;
+      margin-top: 20px;
+      &__image {
+        img {
+          width: 120px;
+          height: 120px;
+          border-radius: 3px;
+          border: 1px solid #979797;
+        }
+      }
+      &__infos {
+        margin-left: 30px;
+        h2 {
+          margin: 0 0 5px 0;
+          padding: 2px;
+          font-family: "Open Sans", sans-serif;
+          font-weight: 600;
+          font-size: 22px;
+        }
+        .ranking {
+          display: flex;
+          align-items: center;
+          .note {
+            padding: 2px;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            color: #FFAB66;
+          }
+          .stars {
+            margin-left: 5px;
+            display: flex;
+            align-items: center;
+            div {
+              width: 20px;
+              height: 20px;
+            }
+          }
+          .reviews {
+            margin-left: 20px;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            color: rgba(112, 112, 112, 0.6);
+          }
+        }
+        p {
+          font-family: "Open Sans", sans-serif;
+          font-weight: 400;
+          font-size: 18px;
+          color: rgba(112, 112, 112, 0.6);
+        }
+      }
+    }
+  }
+}
+
+.plain {
+  background: url('/assets/img/star-plain.png') no-repeat;
+  background-size: 100%;
+}
+
+.empty {
+  background: url('/assets/img/star-empty.png') no-repeat;
+  background-size: 100%;
+}

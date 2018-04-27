@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "algoliasearch": "registry:dt/algoliasearch#3.18.1+20161123230927"
+  }
+}

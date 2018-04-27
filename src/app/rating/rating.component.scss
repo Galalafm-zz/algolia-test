@@ -1,0 +1,40 @@
+.rating {
+  padding: 20px 40px 40px 40px;
+  h2 {
+    padding: 0;
+    margin: 15px 0 0 0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: #333333;
+  }
+  .list {
+    list-style: none;
+    padding: 2px;
+    margin: 10px 0 0 0;
+    li {
+      display: flex;
+      padding: 5px 5px 5px 10px;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      color: #333333;
+      cursor: pointer;
+      div {
+        width: 30px;
+        height: 30px;
+        margin: 3px;
+      }
+    }
+  }
+}
+
+.plain {
+  background: url('/assets/img/star-plain.png') no-repeat;
+  background-size: 100%;
+}
+
+.empty {
+  background: url('/assets/img/star-empty.png') no-repeat;
+  background-size: 100%;
+}

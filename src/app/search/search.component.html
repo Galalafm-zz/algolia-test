@@ -1,0 +1,39 @@
+<div class="topbar">
+  <input class="topbar__search" type="search" [(ngModel)]="queryString" (ngModelChange)="searchFor($event)" placeholder="Search for Restaurants by Name, Cuisine, Location" aria-label="Search">
+</div>
+
+<div class="content">
+  <div class="content__sidebar">
+    <app-food-type></app-food-type>
+    <app-rating></app-rating>
+    <app-payment></app-payment>
+  </div>
+  <div class="content__results" *ngIf="isSearch">
+    <div class="numbers">
+      <p>{{ this.hits.nbHits }} results found</p>
+      <div class="line"></div>
+    </div>
+    <div class="list"></div>
+    <div class="card" *ngFor="let hit of this.hits.hits">
+      <div class="card__image">
+        <img src="{{ hit.image_url }}"/>
+      </div>
+      <div class="card__infos">
+        <h2>{{ hit.name }}</h2>
+        <div class="ranking">
+          <span class="note">{{ hit.stars_count }}</span>
+          <span class="stars">
+            <div class="star1 plain"></div>
+            <div class="star2 plain"></div>
+            <div class="star3 plain"></div>
+            <div class="star4 plain"></div>
+            <div class="star5 plain"></div>
+          </span>
+          <span class="reviews">({{ hit.reviews_count }}) reviews</span>
+        </div>
+        <p>{{ hit.food_type }} | {{ hit.area }} | {{ hit.price_range }}</p>
+      </div>
+    </div>
+    <div class="utton"></div>
+  </div>
+</div>
